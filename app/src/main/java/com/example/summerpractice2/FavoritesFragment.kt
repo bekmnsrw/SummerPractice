@@ -5,17 +5,17 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.findFragment
 import androidx.navigation.fragment.findNavController
-import com.example.summerpractice2.databinding.FragmentMusicBinding
+import com.example.summerpractice2.databinding.FragmentFavoritesBinding
 
 class FavoritesFragment : Fragment(R.layout.fragment_favorites) {
 
-    private var _binding: FragmentMusicBinding? = null
+    private var _binding: FragmentFavoritesBinding? = null
     private val binding get() = _binding!!
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        _binding = FragmentMusicBinding.bind(view)
+        _binding = FragmentFavoritesBinding.bind(view)
 
         binding.btnMain.setOnClickListener {
             val currentFragment = view.findFragment<Fragment>().toString().substringBefore("{")

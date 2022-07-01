@@ -4,18 +4,18 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.summerpractice2.databinding.FragmentMusicBinding
+import com.example.summerpractice2.databinding.FragmentMainBinding
 import com.google.android.material.snackbar.Snackbar
 
 class MainFragment : Fragment(R.layout.fragment_main) {
 
-    private var _binding: FragmentMusicBinding? = null
+    private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        _binding = FragmentMusicBinding.bind(view)
+        _binding = FragmentMainBinding.bind(view)
 
         val fragmentToShow = arguments?.getString(FRAGMENT).orEmpty()
         Snackbar.make(view, fragmentToShow, Snackbar.LENGTH_LONG).show()
